@@ -1,0 +1,30 @@
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #460952;
+    /* background: linear-gradient(to right, #000000, #1b0f2b); */
+    color: #fff;
+  }
+  
+  .landing-logo {
+    width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .landing-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .landing-button {
+    padding: 10px 20px;
+    background: #460952;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
