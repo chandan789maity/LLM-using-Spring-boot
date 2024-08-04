@@ -1,13 +1,13 @@
-package com.spring.chatbot;
+package com.spring.chatbot.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ServerApplication {
+public class GeminiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ServerApplication.class, args);
+		SpringApplication.run(GeminiApplication.class, args);
 	}
 
 }
