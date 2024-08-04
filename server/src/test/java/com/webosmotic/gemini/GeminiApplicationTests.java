@@ -1,10 +1,10 @@
-package com.spring.chatbot;
+package com.webosmotic.gemini;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ServerApplicationTests {
+class GeminiApplicationTests {
 
 	@Test
 	void contextLoads() {

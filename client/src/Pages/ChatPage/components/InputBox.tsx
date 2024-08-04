@@ -23,7 +23,7 @@ const InputBox: React.FC = () => {
         statusCode: number;
         data: string;
         message: string;
-      }>('http://localhost:9001/chatgpt/chat', { message });
+      }>('http://localhost:8080/api/chat', { message });
 
       console.log('Server Response:', response.data); // Debugging line
 

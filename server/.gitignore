@@ -30,4 +30,11 @@ build/
 !**/src/test/**/build/
 
 ### VS Code ###
+.vscode/
 
+
+# mvn clean install
+# mvn spring-boot:run
+# {
+#     "prompt": "Hello, I am a user."
+# }
