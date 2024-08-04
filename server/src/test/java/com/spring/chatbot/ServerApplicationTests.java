@@ -1,10 +1,10 @@
-package com.chatbot.chatbot;
+package com.spring.chatbot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ChatbotApplicationTests {
+class ServerApplicationTests {
 
 	@Test
 	void contextLoads() {
