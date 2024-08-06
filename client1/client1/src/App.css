@@ -1,0 +1,35 @@
+/* Command line interface Like UI */
+
+body {
+  background-color: #000;
+  color: #0f0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.App {
+  text-align: left;
+  padding: 20px;
+}
+
+input[type="text"] {
+  background-color: #000;
+  color: #0f0;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 5px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+button {
+  display: none;
+}
+
+.prompt {
+  color: #0f0;
+}
+
+.response {
+  color: #0f0;
+  white-space: pre-line;
+}

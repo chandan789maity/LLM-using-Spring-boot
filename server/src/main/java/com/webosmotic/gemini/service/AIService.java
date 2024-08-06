@@ -20,7 +20,7 @@ public class AIService {
 
     private static final String GEMINI_MODEL = "gemini-1.5-flash";
 
-    private static final String API_KEY =GOOGLE_API_KEY;
+    private static final String API_KEY ="AIzaSyBPC2sl1UFgd8V1gcorKvbUujQWaxUizEE";
     private String conversationHistory = "";
     public String chat(String prompt) {
 
