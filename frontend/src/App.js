@@ -4,8 +4,9 @@ import ChatPage from './page/ChatPage';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <ChatPage/>
+      
     </div>
   );
 }

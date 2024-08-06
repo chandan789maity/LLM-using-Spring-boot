@@ -1,6 +1,9 @@
-import React,{useState} from "react";
-import ResponseDisplay from "../components/ResponseDisplay"
-import ChatForm from "../components/ChatForm"
+import React, { useState } from "react";
+import ResponseDisplay from "../components/ResponseDisplay";
+import ChatForm from "../components/ChatForm";
+import { FaRobot } from "react-icons/fa";
+import { AiOutlineSend } from "react-icons/ai";
+import "animate.css";
 
 const ChatPage = () => {
   const [prompt, setPrompt] = useState("");
@@ -15,7 +18,7 @@ const ChatPage = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(newPrompt),
+        body: JSON.stringify({ prompt: newPrompt }),
       });
 
       if (!response.ok) {
@@ -25,7 +28,7 @@ const ChatPage = () => {
       const data = await response.text();
       console.log("Received response:", data);
       setResponse(data);
-      setPrompt(newPrompt); // Set the prompt so it can be displayed
+      setPrompt(newPrompt);
       setError(null);
     } catch (error) {
       console.error("Error:", error);
@@ -33,12 +36,18 @@ const ChatPage = () => {
       setError("An error occurred while fetching the response.");
     }
   };
+
   return (
-    <div>
-      <h1>AI Chat</h1>
-      <ChatForm onChat={handleChat} />
-      {error && <p className="error">{error}</p>}
-      <ResponseDisplay prompt={prompt} response={response} />
+    <div className="flex justify-center items-center h-screen bg-black">
+      <div className="bg-slate-800 h-4/5 w-3/5 rounded-3xl p-6 shadow-2xl shadow-orange-400 animate__animated animate__fadeIn">
+        <h1 className="text-5xl font-bold pt-9 text-center text-violet-600 flex items-center justify-center">
+          <FaRobot className="mr-2" />
+          AI Chat
+        </h1>
+        <ChatForm onChat={handleChat} />
+        {error && <p className="error text-red-500 text-center mt-4">{error}</p>}
+        <ResponseDisplay prompt={prompt} response={response} />
+      </div>
     </div>
   );
 };
