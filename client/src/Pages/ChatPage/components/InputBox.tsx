@@ -21,14 +21,13 @@ const InputBox: React.FC = () => {
       // Send the message to the server
       const response = await axios.post<{
         statusCode: number;
-        data: string;
-        message: string;
-      }>('http://localhost:8080/api/chat', { message });
+        response: string;
+      }>('http://localhost:8080/api/chat', { prompt: message });
 
       console.log('Server Response:', response.data); // Debugging line
 
       // Extract the server's response
-      const serverMessage = response.data.data;
+      const serverMessage = response.data.response;
       console.log(serverMessage);
 
       // Update the interaction with the received answer
@@ -41,7 +40,7 @@ const InputBox: React.FC = () => {
       console.error('Error sending message to server:', error);
       setInteractions((prev) => {
         const newInteractions = [...prev];
-        newInteractions[currentIndex].answer = 'Server is not running on render.';
+        newInteractions[currentIndex].answer = 'Server is not running or there was an error.';
         return newInteractions;
       });
     } finally {
