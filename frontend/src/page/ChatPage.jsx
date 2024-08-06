@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import ChatForm from "./components/ChatForm";
-import ResponseDisplay from "./components/ResponseDisplay";
-import "./App.css";
+import React,{useState} from "react";
+import ResponseDisplay from "../components/ResponseDisplay"
+import ChatForm from "../components/ChatForm"
 
-function App() {
+const ChatPage = () => {
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
   const [error, setError] = useState(null);
@@ -34,15 +33,14 @@ function App() {
       setError("An error occurred while fetching the response.");
     }
   };
-
   return (
-    <div className="App">
+    <div>
       <h1>AI Chat</h1>
       <ChatForm onChat={handleChat} />
       {error && <p className="error">{error}</p>}
       <ResponseDisplay prompt={prompt} response={response} />
     </div>
   );
-}
+};
 
-export default App;
+export default ChatPage;

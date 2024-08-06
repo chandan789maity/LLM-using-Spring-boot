@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function ChatForm({ onChat }) {
+const ChatForm = ({ onChat }) => {
   const [prompt, setPrompt] = useState("");
 
   const handleSubmit = (e) => {
@@ -24,6 +24,6 @@ function ChatForm({ onChat }) {
       />
     </form>
   );
-}
+};
 
 export default ChatForm;

@@ -1,6 +1,6 @@
 import React from "react";
 
-function ResponseDisplay({ prompt, response }) {
+const ResponseDisplay =({ prompt, response })=> {
   return (
     <div className="response">
       <div className="prompt-display">
