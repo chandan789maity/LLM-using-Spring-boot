@@ -32,7 +32,7 @@ build/
 ### VS Code ###
 .vscode/
 /src/Constant/
-.env
+/src/.env
 
 # mvn clean install
 # mvn spring-boot:run
