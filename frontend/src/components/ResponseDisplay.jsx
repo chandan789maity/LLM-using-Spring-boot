@@ -16,8 +16,8 @@ const ResponseDisplay = ({ prompt, response }) => {
         <div className="text-white font-semibold flex items-center">
           <FaRobot className="mr-2" /> AI Response:
         </div>
-        <div className="h-72 overflow-y-auto">
-        <div className="mt-2 p-2 bg-gray-700 rounded-lg text-white whitespace-pre-wrap">
+        <div className="h-96 overflow-y-auto">
+        <div className="mt-2 p-4 text-green-500 bg-black rounded-lg whitespace-pre-wrap">
           {response}
         </div>
         </div>
