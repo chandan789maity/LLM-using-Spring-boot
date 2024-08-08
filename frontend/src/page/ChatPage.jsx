@@ -38,7 +38,7 @@ const ChatPage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-black">
+    <div className="flex justify-center items-center h-screen bg-black mx-auto">
       <div className="bg-slate-800 h-full w-4/5 pt-4 my-6 rounded-3xl p-6 shadow-2xl shadow-orange-400 animate__animated animate__fadeIn">
         <h1 className="text-5xl font-bold pt-4 text-center text-violet-600 flex items-center justify-center">
           <FaRobot className="mr-2" />
